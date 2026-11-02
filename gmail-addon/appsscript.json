@@ -1,0 +1,27 @@
+{
+  "timeZone": "Asia/Jerusalem",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+  "https://www.googleapis.com/auth/gmail.addons.execute",
+  "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+  "https://www.googleapis.com/auth/script.external_request" 
+   ],
+  "exceptionLogging": "STACKDRIVER",
+  "addOns": {
+    "common": {
+      "name": "Upwind Email Security Analyzer",
+      "logoUrl": "https://www.gstatic.com/images/branding/product/1x/gmail_48dp.png",
+      "homepageTrigger": {
+        "runFunction": "buildHomePage"
+      }
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "buildHomePage"
+        }
+      ]
+    }
+  }
+}
